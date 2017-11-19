@@ -2,9 +2,11 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'jad-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  templateUrl: './app.component.html'
 })
 export class AppComponent {
-  title = 'jad';
+  luke = {name: 'luke', isJedi: true, temple: 'Coruscant'}
+  fabio = {name: 'Fabio', isJedi: true, temple: 'AngularLand'}
+  amanda = {name: 'Amanda', isJedi: false}
+
 }
