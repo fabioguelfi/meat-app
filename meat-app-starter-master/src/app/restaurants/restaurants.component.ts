@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core'
 import {RestaurantInterface} from './restaurant/restaurant.model'
-import { RestaurantsService } from 'app/restaurants/restaurants.service'
+import { RestaurantsService } from './restaurants.service'
 
 @Component({
   selector: 'mt-restaurants',
@@ -13,6 +13,7 @@ restaurants: RestaurantInterface[]
   constructor(private restaurantsService: RestaurantsService) { }
 
   ngOnInit() {
-    this.restaurants = this.restaurantsService.restaurants()
+    this.restaurantsService.restaurants()
+    .subscribe(restaurants => this.restaurants = restaurants)
   }
 }
